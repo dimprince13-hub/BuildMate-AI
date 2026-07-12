@@ -1,0 +1,12 @@
+/**
+ * Database Migrations
+ * ============================================================================
+ * SQL migration files for database schema management.
+ * Migrations are applied in numerical order.
+ *
+ * Files in this directory:
+ * - 001_init.sql: Initial schema
+ * - 002_add_users_table.sql: Add users table
+ * - 003_add_sessions_table.sql: Add sessions table
+ * - etc.
+ */

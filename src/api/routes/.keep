@@ -1,0 +1,13 @@
+/**
+ * API Routes
+ * ============================================================================
+ * Directory for Express route handlers.
+ * Each major feature gets its own route file for modularity.
+ *
+ * Files in this directory:
+ * - health.js: Health check endpoint
+ * - webhook.js: Telegram webhook endpoint
+ * - users.js: User management endpoints
+ * - builds.js: Build management endpoints
+ * - etc.
+ */

@@ -1,0 +1,12 @@
+/**
+ * Database Models
+ * ============================================================================
+ * ORM models or database query builders.
+ * Provides typed access to database tables.
+ *
+ * Files in this directory:
+ * - User.js: User model
+ * - Session.js: Session model
+ * - Build.js: Build model
+ * - etc.
+ */

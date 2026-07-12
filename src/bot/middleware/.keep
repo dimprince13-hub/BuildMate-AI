@@ -1,0 +1,13 @@
+/**
+ * Bot Middleware
+ * ============================================================================
+ * Directory for Telegraf middleware.
+ * Middleware runs before commands and handlers.
+ *
+ * Files in this directory:
+ * - authMiddleware.js: User authentication
+ * - rateLimitMiddleware.js: Rate limiting
+ * - loggingMiddleware.js: Request logging
+ * - errorMiddleware.js: Error handling
+ * - etc.
+ */

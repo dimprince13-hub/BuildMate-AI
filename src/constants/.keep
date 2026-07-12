@@ -1,0 +1,13 @@
+/**
+ * Constants
+ * ============================================================================
+ * Application-wide constants and enumerations.
+ *
+ * Files in this directory:
+ * - httpStatus.js: HTTP status codes
+ * - botMessages.js: Bot response messages
+ * - errorMessages.js: Error messages
+ * - botCommands.js: Available bot commands
+ * - config.js: Configuration constants
+ * - etc.
+ */

@@ -1,0 +1,13 @@
+/**
+ * Unit Tests
+ * ============================================================================
+ * Jest unit test files.
+ * Tests for utilities, services, and controllers.
+ *
+ * Test structure mirrors src/ structure:
+ * - utils/
+ * - services/
+ * - controllers/
+ * - repositories/
+ * - etc.
+ */

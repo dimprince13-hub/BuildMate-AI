@@ -1,0 +1,13 @@
+/**
+ * Utilities
+ * ============================================================================
+ * Helper functions and utilities used across the application.
+ *
+ * Files in this directory:
+ * - validators.js: Input validation functions
+ * - formatters.js: Data formatting utilities
+ * - crypto.js: Encryption utilities
+ * - helpers.js: General helper functions
+ * - errors.js: Custom error classes
+ * - etc.
+ */

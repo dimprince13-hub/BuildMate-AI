@@ -1,0 +1,12 @@
+/**
+ * Cache Layer
+ * ============================================================================
+ * Redis cache management and key-value operations.
+ * Provides cache abstraction for services.
+ *
+ * Files in this directory:
+ * - cacheManager.js: Cache management utilities
+ * - userCache.js: User cache operations
+ * - sessionCache.js: Session cache operations
+ * - etc.
+ */

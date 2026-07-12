@@ -1,0 +1,15 @@
+/**
+ * Documentation
+ * ============================================================================
+ * Project documentation including guides, architecture, and API docs.
+ *
+ * Files in this directory:
+ * - ARCHITECTURE.md: System architecture overview
+ * - API.md: API endpoint documentation
+ * - DEVELOPMENT.md: Development guide
+ * - DEPLOYMENT.md: Deployment guide
+ * - TESTING.md: Testing guide
+ * - DATABASE.md: Database schema documentation
+ * - BOT_COMMANDS.md: Bot commands reference
+ * - etc.
+ */

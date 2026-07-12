@@ -1,0 +1,14 @@
+/**
+ * Express Middleware
+ * ============================================================================
+ * Global Express middleware functions.
+ * These are applied to all routes.
+ *
+ * Files in this directory:
+ * - authMiddleware.js: JWT authentication
+ * - errorHandler.js: Error handling
+ * - requestLogger.js: Request logging
+ * - corsMiddleware.js: CORS configuration
+ * - rateLimitMiddleware.js: Rate limiting
+ * - etc.
+ */

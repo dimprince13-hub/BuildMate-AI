@@ -1,0 +1,11 @@
+/**
+ * Database Seeders
+ * ============================================================================
+ * Seed scripts for populating database with test/demo data.
+ * Used for development and testing environments.
+ *
+ * Files in this directory:
+ * - seedUsers.js: Seed user data
+ * - seedBuilds.js: Seed build data
+ * - etc.
+ */

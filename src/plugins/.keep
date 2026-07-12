@@ -1,0 +1,12 @@
+/**
+ * Plugins
+ * ============================================================================
+ * Optional plugins and extensions.
+ * Plugins can extend core functionality.
+ *
+ * Files in this directory:
+ * - githubPlugin.js: GitHub integration
+ * - slackPlugin.js: Slack integration
+ * - analyticsPlugin.js: Analytics tracking
+ * - etc.
+ */

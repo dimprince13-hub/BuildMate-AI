@@ -1,0 +1,15 @@
+/**
+ * Services
+ * ============================================================================
+ * Business logic layer.
+ * Services contain core application logic and orchestrate between
+ * repositories, external APIs, and other services.
+ *
+ * Files in this directory:
+ * - authService.js: Authentication logic
+ * - userService.js: User management
+ * - buildService.js: Build integration
+ * - aiService.js: AI service integration
+ * - notificationService.js: Notification handling
+ * - etc.
+ */

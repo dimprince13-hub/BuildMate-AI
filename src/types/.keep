@@ -1,0 +1,13 @@
+/**
+ * TypeScript Type Definitions
+ * ============================================================================
+ * Type definitions and interfaces for better IDE support and documentation.
+ * Even though we use JavaScript, JSDoc types help with development.
+ *
+ * Files in this directory:
+ * - user.types.js: User type definitions
+ * - bot.types.js: Bot type definitions
+ * - api.types.js: API type definitions
+ * - common.types.js: Common type definitions
+ * - etc.
+ */

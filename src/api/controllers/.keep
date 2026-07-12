@@ -1,0 +1,13 @@
+/**
+ * API Controllers
+ * ============================================================================
+ * Directory for request handlers and business logic orchestration.
+ * Controllers connect routes to services.
+ *
+ * Files in this directory:
+ * - healthController.js: Health check logic
+ * - webhookController.js: Webhook processing
+ * - userController.js: User management logic
+ * - buildController.js: Build management logic
+ * - etc.
+ */

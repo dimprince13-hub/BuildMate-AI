@@ -1,0 +1,12 @@
+/**
+ * Templates
+ * ============================================================================
+ * Message templates and response formats.
+ * Used for generating consistent bot responses.
+ *
+ * Files in this directory:
+ * - messageTemplates.js: Telegram message templates
+ * - emailTemplates.js: Email templates
+ * - notificationTemplates.js: Notification templates
+ * - etc.
+ */

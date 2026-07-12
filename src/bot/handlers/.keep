@@ -1,0 +1,12 @@
+/**
+ * Bot Message Handlers
+ * ============================================================================
+ * Directory for message handlers that process incoming messages.
+ * Handles text, document, media, and other message types.
+ *
+ * Files in this directory:
+ * - textHandler.js: Handle text messages
+ * - documentHandler.js: Handle document uploads
+ * - mediaHandler.js: Handle media messages
+ * - etc.
+ */

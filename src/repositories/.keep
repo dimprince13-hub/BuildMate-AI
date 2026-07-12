@@ -1,0 +1,13 @@
+/**
+ * Repositories
+ * ============================================================================
+ * Data access layer.
+ * Repositories abstract database queries and provide clean interfaces
+ * for services to interact with data.
+ *
+ * Files in this directory:
+ * - userRepository.js: User data access
+ * - sessionRepository.js: Session data access
+ * - buildRepository.js: Build data access
+ * - etc.
+ */

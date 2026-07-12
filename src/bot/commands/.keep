@@ -1,0 +1,12 @@
+/**
+ * Bot Commands
+ * ============================================================================
+ * Directory for all Telegram bot command handlers.
+ * Each command is a separate module for modularity.
+ *
+ * Files in this directory:
+ * - start.js: /start command
+ * - help.js: /help command
+ * - status.js: /status command
+ * - etc.
+ */

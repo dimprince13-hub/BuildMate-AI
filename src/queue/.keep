@@ -1,0 +1,13 @@
+/**
+ * Job Queue
+ * ============================================================================
+ * Background job processing and task queue management.
+ * Handles async operations like sending notifications, emails, etc.
+ *
+ * Files in this directory:
+ * - queueManager.js: Queue management
+ * - jobs/
+ *   ├── sendNotificationJob.js
+ *   ├── processBuildJob.js
+ *   └── etc.
+ */

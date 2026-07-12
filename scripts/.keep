@@ -1,0 +1,14 @@
+/**
+ * Utility Scripts
+ * ============================================================================
+ * Node.js scripts for development and operations.
+ *
+ * Files in this directory:
+ * - db-init.js: Initialize database schema
+ * - db-migrate.js: Run database migrations
+ * - db-reset.js: Reset database (dev only)
+ * - seed-db.js: Seed database with test data
+ * - generate-docs.js: Generate API documentation
+ * - backup-db.js: Backup database
+ * - etc.
+ */

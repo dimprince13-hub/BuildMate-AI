@@ -3,18 +3,17 @@
  * ============================================================================
  * BuildMate AI - AI-powered Telegram Bot for Development Workflows
  *
- * This module serves as the main entry point for the application.
- * It handles:
- * - Environment variable validation
- * - Logger initialization
- * - Express server setup
- * - Graceful shutdown handling
- * - Error handling
+ * This is the main entry point that:
+ * - Loads environment variables
+ * - Initializes the logger
+ * - Starts the Express server
+ * - Handles graceful shutdown
+ * - Catches unhandled errors
  */
 
 import 'dotenv/config';
 import http from 'http';
-import app from './api/index.js';
+import app from './app.js';
 import logger from './config/logger.js';
 
 // ============================================================================
@@ -23,7 +22,7 @@ import logger from './config/logger.js';
 
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
-const isDevelopment = NODE_ENV === 'development';
+const HOST = process.env.HOST || '0.0.0.0';
 
 // ============================================================================
 // Startup Banner
@@ -31,54 +30,26 @@ const isDevelopment = NODE_ENV === 'development';
 
 function printStartupBanner() {
   const banner = `
-    ╔══════════════════════════════════════════════════════════════════╗
-    ║                                                                  ║
-    ║          🚀 BuildMate AI - Development Assistant Bot            ║
-    ║                                                                  ║
-    ║     AI mentor that teaches developers to build software         ║
-    ║              step by step with Telegram                         ║
-    ║                                                                  ║
-    ╚══════════════════════════════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║              🚀 BuildMate AI - Development Assistant Bot                  ║
+║                                                                            ║
+║        AI mentor that teaches developers to build software step by step   ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
   `;
 
   const info = `
-    Environment:  ${NODE_ENV.toUpperCase()}
-    Port:         ${PORT}
-    Timezone:     ${Intl.DateTimeFormat().resolvedOptions().timeZone}
-    Memory:       ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
-    Uptime:       Just started
-    Node.js:      ${process.version}
-    PID:          ${process.pid}
+  ✓ Environment:    ${NODE_ENV.toUpperCase()}
+  ✓ Host:           ${HOST}
+  ✓ Port:           ${PORT}
+  ✓ Node.js:        ${process.version}
+  ✓ Process ID:     ${process.pid}
+  ✓ Timestamp:      ${new Date().toISOString()}
   `;
 
   console.log(banner);
   console.log(info);
-  console.log('    Starting services...\n');
-}
-
-// ============================================================================
-// Environment Validation
-// ============================================================================
-
-function validateEnvironment() {
-  const requiredEnvVars = [
-    'NODE_ENV',
-    'PORT',
-    'LOG_LEVEL',
-    'TELEGRAM_BOT_TOKEN',
-    'TELEGRAM_BOT_USERNAME',
-  ];
-
-  const missingEnvVars = requiredEnvVars.filter((envVar) => !process.env[envVar]);
-
-  if (missingEnvVars.length > 0) {
-    logger.error(
-      `Missing required environment variables: ${missingEnvVars.join(', ')}`,
-    );
-    process.exit(1);
-  }
-
-  logger.info('✓ All required environment variables are set');
 }
 
 // ============================================================================
@@ -90,22 +61,15 @@ async function startServer() {
     // Print startup banner
     printStartupBanner();
 
-    // Validate environment
-    validateEnvironment();
-
     // Create HTTP server
     const server = http.createServer(app);
 
     // Start listening
-    server.listen(PORT, () => {
-      logger.info(`✓ Express server listening on port ${PORT}`);
-      logger.info(`✓ API available at http://localhost:${PORT}`);
-
-      if (isDevelopment) {
-        logger.info(`✓ Debug mode enabled`);
-      }
-
-      logger.info('\n✓ Application is ready to accept requests\n');
+    server.listen(PORT, HOST, () => {
+      logger.info(`Server started successfully`);
+      logger.info(`API available at http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
+      logger.info(`Health check: http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}/health`);
+      logger.info(`Ready to accept requests\n`);
     });
 
     // Handle server errors
@@ -118,7 +82,6 @@ async function startServer() {
       process.exit(1);
     });
 
-    // Return server for graceful shutdown
     return server;
   } catch (error) {
     logger.error('Failed to start server:', error);
@@ -140,12 +103,8 @@ function setupGracefulShutdown(server) {
       try {
         // Close HTTP server
         server.close(() => {
-          logger.info('✓ HTTP server closed');
+          logger.info('HTTP server closed');
         });
-
-        // TODO: Close database connection
-        // TODO: Close cache connection
-        // TODO: Close bot connection
 
         // Exit after a timeout if something doesn't close cleanly
         setTimeout(() => {
@@ -176,13 +135,8 @@ function setupErrorHandlers() {
 
   // Handle unhandled promise rejections
   process.on('unhandledRejection', (reason, promise) => {
-    logger.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    logger.error('Unhandled Rejection:', reason);
     process.exit(1);
-  });
-
-  // Handle warnings
-  process.on('warning', (warning) => {
-    logger.warn(`Warning: ${warning.name}`, warning.message);
   });
 }
 

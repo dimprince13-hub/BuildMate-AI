@@ -12,7 +12,7 @@
  *
  * Usage:
  *   import helpCommand from './commands/help.js';
- *   bot.command('help', (ctx) => helpCommand(ctx, bot));
+ *   bot.command('help', (ctx) => helpCommand(ctx));
  */
 
 import logger from '../../config/logger.js';
@@ -24,9 +24,8 @@ import logger from '../../config/logger.js';
 /**
  * Handle /help command
  * @param {Context} ctx - Telegraf context
- * @param {Telegraf} bot - Telegraf bot instance
  */
-async function helpCommand(ctx, bot) {
+async function helpCommand(ctx) {
   try {
     const { from } = ctx;
 
